@@ -17,6 +17,10 @@ public class UsuarioService {
         return repository.findAll();
     }
 
+    public Usuario getUserByCpf(String cpf){
+        return repository.findByCpf(cpf);
+    }
+
     public Usuario insertUsuario(Usuario usuario){
         return repository.save(usuario);
     }
