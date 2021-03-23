@@ -33,6 +33,7 @@ O que funciona:
     2. Somente a listagem de disciplinas
    
  Da visão do aluno:
+ 
     1. A listagem de cursos
     
 Não consegui implementar a visão do professor
