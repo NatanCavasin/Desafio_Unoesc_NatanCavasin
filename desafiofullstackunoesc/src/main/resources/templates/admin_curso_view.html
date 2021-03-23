@@ -45,7 +45,14 @@
             <div class="col-md">
                 <div class="card">
                     <div class="card-header">
-                        <h1>Lista de Cursos</h1>
+                        <div class="col-md-10">
+                            <h1>Lista de Cursos</h1>
+                        </div>
+                        <div class="col-md-2">
+                            <a class="btn btn-primary float-right" href="#" th:href="@{/admin/curso/inserir}" role="button">
+                                + Adicionar
+                            </a>
+                        </div>
                     </div>
                     <div class="card-body">
 
@@ -55,6 +62,8 @@
                                 <th>Código</th>
                                 <th>Nome</th>
                                 <th>Vagas</th>
+                                <th></th>
+                                <th></th>
                             </tr>
                             </thead>
                             <tbody>
@@ -62,6 +71,8 @@
                                 <td th:text="${curso.id}"></td>
                                 <td th:text="${curso.nome}"></td>
                                 <td th:text="${curso.vagas}"></td>
+                                <td><a class="btn btn-success" th:href="@{/admin/curso/atualizar/{id}(id=${curso.id})}">Editar</a></td>
+                                <td><a class="btn btn-danger" th:href="@{/admin/curso/excluir/{id}(id=${curso.id})}">Excluir</a></td>
                             </tr>
                             </tbody>
                         </table>
