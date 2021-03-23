@@ -2,7 +2,7 @@
 
 O desafio foi desenvolvido seguindo todas as tecnologias exigidas.
 
-**Configurações iniciais
+**Configurações iniciais**
 
 para que seja possivel acessar a aplicação, é necessário incluir o administrador na base de dados:
 
@@ -20,7 +20,7 @@ E por fim, inserir a relação na tabela de associação:
 
 INSERT INTO `desafiounoesc`.`user_roles` VALUES (1,1);
 
-**Considerações
+**Considerações**
 
 Eu não consegui concluir todo o objetivo do desafio, peço desculpas por isso, mas tive que resolver alguns outros problemas pessoais 
 e profissionais que me tomaram tempo durante a semana, de modo que eu consegui começar a desenvolver apenas na sexta-feira.
