@@ -50,13 +50,18 @@ public class alunoController {
     @PostMapping("/inscricao/confirmar")
     @Secured({"ROLE_ALUNO"})
     public RedirectView atualizarUsuario(Curso curso, @AuthenticationPrincipal Usuario currentUser){
-       Inscricao inscricao = this.inscricaoService.insertInscricao(new Inscricao());
+       Inscricao inscricao = new Inscricao();
+       inscricao.setUsuario_id(currentUser.getId());
+       inscricao.setCurso_id(curso.getId());
+
+       Inscricao inc_db = inscricaoService.insertInscricao(inscricao);
+
         List<Inscricao> inscUsuario =  currentUser.getInscricoes();
-        inscUsuario.add(inscricao);
+        inscUsuario.add(inc_db);
         currentUser.setInscricoes(inscUsuario);
 
         List<Inscricao> inscCurso =  curso.getInscricoes();
-        inscCurso.add(inscricao);
+        inscCurso.add(inc_db);
         curso.setInscricoes(inscUsuario);
 
         return new RedirectView("/");
